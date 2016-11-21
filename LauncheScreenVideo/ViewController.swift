@@ -26,7 +26,7 @@ class ViewController: UIViewController {
         let item = AVPlayerItem.init(url: url)
         
         self.player = AVPlayer(playerItem: item)
-        self.player.volume = 100;
+        self.player.volume = 0;
         
         let playerLayer = AVPlayerLayer(player: self.player)
         playerLayer.videoGravity = AVLayerVideoGravityResizeAspectFill

@@ -18,6 +18,12 @@ class ViewController: UIViewController {
         super.viewDidLoad()
         
         createVideoPlayer()
+        
+        NotificationCenter.default.addObserver(
+        self,
+        selector: #selector(ViewController.applicationDidBecomeActive),
+        name: NSNotification.Name.UIApplicationDidBecomeActive,
+        object: nil)
     }
     
     func createVideoPlayer() {
@@ -41,6 +47,10 @@ class ViewController: UIViewController {
             selector: #selector(ViewController.moviePlayDidEnd),
             name: NSNotification.Name.AVPlayerItemDidPlayToEndTime,
             object: self.player.currentItem)
+    }
+    
+    func applicationDidBecomeActive(notification: NSNotification) {
+        self.player.play()
     }
     
     func moviePlayDidEnd(notification: NSNotification) {

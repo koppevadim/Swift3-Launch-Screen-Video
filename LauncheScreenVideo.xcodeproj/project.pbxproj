@@ -290,6 +290,7 @@
 				BDDAFB1C1DE36A5500A4541F /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
